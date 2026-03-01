@@ -13,12 +13,12 @@
       --bg:      #060a0f;
       --surface: #0d1117;
       --border:  #1e2d3d;
-      --text:    #c9d1d9;
-      --muted:   #4a5568;
+      --text:    #f0f6fc;
+      --muted:   #a0aab4;
       --green:   #00ff88;
       --cyan:    #00d4ff;
       --orange:  #ff6b35;
-      --white:   #f0f6fc;
+      --white:   #ffffff;
       --mono:    'Space Mono', monospace;
       --sans:    'Syne', sans-serif;
     }
@@ -27,8 +27,8 @@
       background: var(--bg);
       color: var(--text);
       font-family: var(--mono);
-      font-size: 13px;
-      line-height: 1.7;
+      font-size: 15px;
+      line-height: 1.8;
       overflow-x: hidden;
       cursor: none;
     }
@@ -71,8 +71,8 @@
     }
     .nav-logo { font-family: var(--sans); font-weight: 800; font-size: 0.95rem; color: var(--white); text-decoration: none; }
     .nav-logo span { color: var(--green); }
-    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--muted); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none;}
+    .nav-links a { text-decoration: none; color: var(--text); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s;}
     .nav-links a:hover { color: var(--green); }
     .nav-status { display: flex; align-items: center; gap: 0.5rem; font-size: 10px; color: var(--green); letter-spacing: 0.1em; }
     .status-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; animation: blink 2s infinite; }
@@ -90,8 +90,8 @@
     }
     .term-dot { width: 10px; height: 10px; border-radius: 50%; }
     .term-dot:nth-child(1){background:#ff5f57} .term-dot:nth-child(2){background:#febc2e} .term-dot:nth-child(3){background:#28c840}
-    .term-label { font-size: 10px; color: var(--muted); letter-spacing: 0.1em; margin-left: 0.5rem; }
-    .hero-prompt { font-size: 12px; color: var(--green); margin-bottom: 0.8rem; opacity: 0; animation: fadeUp 0.6s 0.4s forwards; }
+    .term-label { font-size: 10px; color: var(--text); letter-spacing: 0.1em; margin-left: 0.5rem; }
+    .hero-prompt { font-size: 13px; color: var(--green); margin-bottom: 0.8rem; opacity: 0; animation: fadeUp 0.6s 0.4s forwards; }
     .hero-prompt::before { content: '> '; opacity: 0.6; }
     .hero-name {
       font-family: var(--sans); font-size: clamp(3.5rem, 8vw, 7.5rem);
@@ -104,8 +104,8 @@
       -webkit-text-stroke: 1px var(--border);
     }
     .hero-tagline {
-      margin-top: 2rem; font-size: 12px; color: var(--muted);
-      max-width: 480px; line-height: 2;
+      margin-top: 2rem; font-size: 15px; color: var(--text);
+      max-width: 520px; line-height: 2;
       opacity: 0; animation: fadeUp 0.6s 0.7s forwards;
     }
     .hero-tagline .hl { color: var(--cyan); }
@@ -154,13 +154,13 @@
     .about-left { position: sticky; top: 8rem; }
     .about-left h2 { font-family: var(--sans); font-size: clamp(2rem,4vw,3rem); font-weight: 800; color: var(--white); line-height: 1.1; margin-top: 0.5rem; }
     .about-left h2 em { color: var(--green); font-style: normal; }
-    .about-right p { color: var(--muted); line-height: 2; margin-bottom: 1.2rem; font-size: 12px; }
-    .about-right p strong { color: var(--text); font-weight: 400; }
+    .about-right p { color: var(--text); line-height: 2; margin-bottom: 1.2rem; font-size: 15px; }
+    .about-right p strong { color: var(--white); font-weight: 700; }
     .skills-grid { margin-top: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .skill-block { background: var(--surface); border: 1px solid var(--border); padding: 1.2rem; transition: border-color 0.2s; }
     .skill-block:hover { border-color: var(--green); }
     .skill-block h4 { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cyan); margin-bottom: 0.6rem; }
-    .skill-block p { color: var(--muted); font-size: 11px; line-height: 1.7; margin: 0; }
+    .skill-block p { color: var(--text); font-size: 13px; line-height: 1.8; margin: 0; }
 
     /* PROJECTS */
     #projects { padding: 6rem 3rem; }
@@ -185,40 +185,40 @@
     .placeholder-inner { z-index:1; text-align:center; display:flex; flex-direction:column; align-items:center; gap:0.75rem; }
     .placeholder-inner svg { width:36px; height:36px; stroke:var(--border); fill:none; stroke-width:1; transition:stroke 0.2s; }
     .project-card:hover .placeholder-inner svg { stroke:var(--green); }
-    .placeholder-inner span { font-size:9px; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); transition:color 0.2s; }
+    .placeholder-inner span { font-size:9px; letter-spacing:.15em; text-transform:uppercase; color:var(--text); transition:color 0.2s; }
     .project-card:hover .placeholder-inner span { color:var(--green); }
     .card-corner { position:absolute; top:.8rem; right:.8rem; font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--green); border:1px solid var(--green); padding:.2rem .5rem; opacity:0; transition:opacity 0.2s; background:rgba(6,10,15,0.8); }
     .project-card:hover .card-corner { opacity:1; }
     .project-info { padding: 1.5rem; }
     .project-meta { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem; }
     .project-num { font-size:10px; color:var(--green); letter-spacing:0.1em; }
-    .project-type { font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); border:1px solid var(--border); padding:.15rem .5rem; }
+    .project-type { font-size: 9px; letter-spacing:.12em; text-transform:uppercase; color:var(--text); border:1px solid var(--border); padding:.15rem .5rem; }
     .project-title { font-family:var(--sans); font-size:1.1rem; font-weight:700; color:var(--white); margin-bottom:0.5rem; transition:color 0.2s; }
     .project-card:hover .project-title { color:var(--green); }
-    .project-desc { font-size:11px; color:var(--muted); line-height:1.8; }
+    .project-desc { font-size:13px; color:var(--text); line-height:1.9; }
 
     /* UPLOAD */
     #upload { padding:6rem 3rem; background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
     .upload-grid { display:grid; grid-template-columns:1fr 1.5fr; gap:5rem; align-items:start; }
     .upload-left h2 { font-family:var(--sans); font-size:clamp(1.8rem,3vw,2.5rem); font-weight:800; color:var(--white); margin:.5rem 0 1rem; line-height:1.2; }
-    .upload-left p { color:var(--muted); font-size:11px; line-height:2; }
-    .upload-tip { margin-top:1.5rem; border-left:2px solid var(--green); padding-left:1rem; font-size:10px; color:var(--muted); line-height:1.9; }
+    .upload-left p { color: var(--text); font-size: 14px; line-height: 2; }
+    .upload-tip { margin-top:1.5rem; border-left:2px solid var(--green); padding-left:1rem; font-size:12px; color:var(--text); line-height:1.9; }
     .upload-tip strong { color:var(--cyan); font-weight:400; }
     .upload-tip code { color:var(--green); }
     .drop-zone { border:1px dashed var(--border); padding:3rem 2rem; text-align:center; transition:border-color 0.3s,background 0.3s; }
     .drop-zone.dragging { border-color:var(--green); background:rgba(0,255,136,0.03); }
     .drop-zone svg { width:44px; height:44px; stroke:var(--border); fill:none; stroke-width:1; margin-bottom:1.2rem; transition:stroke 0.3s; }
     .drop-zone.dragging svg { stroke:var(--green); }
-    .drop-zone p { font-size:11px; color:var(--muted); margin-bottom:1.5rem; }
+    .drop-zone p { font-size:13px; color:var(--text); margin-bottom:1.5rem; }
     .drop-zone strong { color:var(--cyan); font-weight:400; }
     .upload-formats { font-size:9px; letter-spacing:.1em; color:var(--muted); opacity:.5; margin-top:1rem; }
     .upload-btn { display:inline-block; border:1px solid var(--green); color:var(--green); padding:.7rem 1.8rem; font-family:var(--mono); font-size:10px; letter-spacing:.15em; text-transform:uppercase; cursor:none; background:transparent; transition:background 0.2s,color 0.2s; }
     .upload-btn:hover { background:var(--green); color:var(--bg); }
     #fileInput { display:none; }
     .uploaded-list { margin-top:1.5rem; display:flex; flex-direction:column; gap:.5rem; }
-    .uploaded-item { background:rgba(0,255,136,0.04); border:1px solid rgba(0,255,136,0.15); padding:.5rem .9rem; font-size:10px; display:flex; justify-content:space-between; align-items:center; animation:fadeUp 0.3s forwards; }
-    .uploaded-item .fname { color:var(--text); }
-    .uploaded-item .fsize { color:var(--muted); }
+    .uploaded-item { background:rgba(0,255,136,0.04); border:1px solid rgba(0,255,136,0.15); padding:.5rem .9rem; font-size:12px; display:flex; justify-content:space-between; align-items:center; animation:fadeUp 0.3s forwards; }
+    .uploaded-item .fname { color:var(--white); }
+    .uploaded-item .fsize { color:var(--text); }
     .remove-btn { color:var(--orange); cursor:pointer; font-size:13px; }
 
     /* CONTACT */
@@ -226,25 +226,26 @@
     .contact-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:6rem; align-items:start; }
     .contact-left h2 { font-family:var(--sans); font-size:clamp(2rem,4vw,3.5rem); font-weight:800; color:var(--white); line-height:1.05; margin:.5rem 0 1.5rem; }
     .contact-left h2 em { color:var(--green); font-style:normal; display:block; }
-    .contact-left > p { color:var(--muted); font-size:11px; line-height:2; max-width:320px; }
+    .contact-left > p { color: var(--text); font-size: 14px; line-height: 2; max-width: 320px; }
     .contact-socials { margin-top:2.5rem; display:flex; flex-direction:column; gap:.8rem; }
-    .social-link { display:flex; align-items:center; gap:.8rem; text-decoration:none; color:var(--muted); font-size:11px; letter-spacing:.05em; padding:.6rem 0; border-bottom:1px solid var(--border); transition:color 0.2s; }
+    .social-link { display:flex; align-items:center; gap:.8rem; text-decoration:none; color:var(--text); font-size:13px; letter-spacing:.05em; padding:.6rem 0; border-bottom:1px solid var(--border); transition:color 0.2s; }
     .social-link:hover { color:var(--green); }
     .social-link .arrow { margin-left:auto; opacity:0; transition:opacity 0.2s; }
     .social-link:hover .arrow { opacity:1; }
     .contact-form { display:flex; flex-direction:column; gap:1.2rem; }
     .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; }
     .form-group { display:flex; flex-direction:column; gap:.5rem; }
-    .form-group label { font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); }
-    .form-group input, .form-group textarea { background:var(--surface); border:1px solid var(--border); padding:.8rem 1rem; font-family:var(--mono); font-size:12px; color:var(--text); outline:none; transition:border-color 0.2s; resize:vertical; -webkit-appearance:none; }
+    .form-group label { font-size: 10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text); }
+    .form-group input, .form-group textarea { background:var(--surface); border:1px solid var(--border); padding:.8rem 1rem; font-family:var(--mono); font-size:14px; color:var(--white); outline:none; transition:border-color 0.2s; resize:vertical; -webkit-appearance:none; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--muted); }
     .form-group input:focus, .form-group textarea:focus { border-color:var(--green); }
     .form-group textarea { min-height:130px; }
     .submit-btn { align-self:flex-start; background:transparent; border:1px solid var(--green); color:var(--green); padding:.9rem 2.5rem; font-family:var(--mono); font-size:11px; letter-spacing:.15em; text-transform:uppercase; cursor:none; transition:background 0.2s,color 0.2s,box-shadow 0.2s; }
     .submit-btn:hover { background:var(--green); color:var(--bg); box-shadow:0 0 20px rgba(0,255,136,0.3); }
 
     /* FOOTER */
-    footer { border-top:1px solid var(--border); padding:1.8rem 3rem; display:flex; justify-content:space-between; align-items:center; font-size:10px; color:var(--muted); letter-spacing:.1em; }
-    footer a { color:var(--muted); text-decoration:none; transition:color 0.2s; }
+    footer { border-top:1px solid var(--border); padding:1.8rem 3rem; display:flex; justify-content:space-between; align-items:center; font-size:12px; color:var(--text); letter-spacing:.1em; }
+    footer a { color:var(--text); text-decoration:none; transition:color 0.2s; }
     footer a:hover { color:var(--green); }
     .footer-right { display:flex; gap:2rem; }
 
@@ -278,10 +279,10 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#upload">Upload</a></li>
+      <!--li><a href="#upload">Upload</a></li-->
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="nav-status"><div class="status-dot"></div>Available for opportunities</div>
+    <div class="nav-status"><!--div class="status-dot"></div>Available for opportunities</div-->
   </nav>
 
   <section id="hero">
@@ -302,8 +303,8 @@
       </div>
     </div>
     <div class="glow-1"></div><div class="glow-2"></div>
-    <div class="code-float">const portfolio = {<br>&nbsp;&nbsp;name: "Tanish",<br>&nbsp;&nbsp;skills: ["design","code"],<br>&nbsp;&nbsp;status: "building"<br>};</div>
-    <div class="code-float">// open to collabs<br>function create(idea) {<br>&nbsp;&nbsp;return art + logic;<br>}</div>
+    <!--div class="code-float">const portfolio = {<br>&nbsp;&nbsp;name: "Tanish",<br>&nbsp;&nbsp;skills: ["design","code"],<br>&nbsp;&nbsp;status: "building"<br>};</div-->
+    <!--div class="code-float">// open to collabs<br>function create(idea) {<br>&nbsp;&nbsp;return art + logic;<br>}</div-->
   </section>
 
   <hr class="section-divider" />
@@ -337,65 +338,54 @@
 
       <div class="project-card reveal">
         <div class="project-media">
-          <div class="placeholder-art"><div class="placeholder-inner">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>
-            <span>Add your image</span>
-          </div></div>
-          <span class="card-corner">View →</span>
+          <a href="Aero-Weave.pdf" target="_blank">
+          <img src="project1.jpg" alt="Aero-Weave art" />
+          <span class="card-corner">View →</span></a>
         </div>
         <div class="project-info">
-          <div class="project-meta"><span class="project-num">01</span><span class="project-type">Web Design</span></div>
-          <h3 class="project-title">Project Title</h3>
-          <p class="project-desc">Brief description of the project. What did you build, what problem did it solve, and what did you learn?</p>
+          <div class="project-meta"><span class="project-num">01</span><span class="project-type">Sustainable Design</span></div>
+          <h3 class="project-title">Aero-Weave</h3>
+          <p class="project-desc">"Aero-Weave" is a biomimicry-inspired, retrofittable facade designed to be attached to the exterior of existing apartments and buildings, specifically targeting high wind and sun facing sides. Instead of just blocking light like standard louvers, it uses thermodynamics and fluid dynamics applying the concept of Bernoulli's principle and its subsequent Venturi effect to passively cool buildings and reduce dependency on AC systems. The basic principle is to use water as an effective coolant.</p>
         </div>
       </div>
 
       <div class="project-card reveal">
         <div class="project-media">
-          <div class="placeholder-art"><div class="placeholder-inner">
-            <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            <span>Add your image</span>
-          </div></div>
-          <span class="card-corner">View →</span>
+          <img src="project1-1.jpg" alt="Aero-Weave exterior view" />
+          <!--span class="card-corner">View →</span-->
         </div>
         <div class="project-info">
-          <div class="project-meta"><span class="project-num">02</span><span class="project-type">Development</span></div>
-          <h3 class="project-title">Code Project</h3>
-          <p class="project-desc">A coding project you're proud of. What tech did you use? What was the challenge you solved?</p>
+          <div class="project-meta"><!--span class="project-num">02</span><span class="project-type">Development</span--></div>
+          <h3 class="project-title">Exterior view</h3>
+          <p class="project-desc">Aero-Weave is a concept imagined with retrofittable modular panels.</p>
         </div>
       </div>
 
       <div class="project-card reveal">
         <div class="project-media">
-          <div class="placeholder-art"><div class="placeholder-inner">
-            <svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg>
-            <span>Add your image</span>
-          </div></div>
-          <span class="card-corner">View →</span>
+          <a href="https://github.com/tanish-sankar/houses" target="_blank">
+          <img src="house_design.png" alt="a simple 3D house design" />
+          <span class="card-corner">View →</span> </a>
         </div>
         <div class="project-info">
-          <div class="project-meta"><span class="project-num">03</span><span class="project-type">Design</span></div>
-          <h3 class="project-title">Design Concept</h3>
-          <p class="project-desc">Upload a sketch, wireframe, or design exploration. Show your process, not just the final result.</p>
+          <div class="project-meta"><span class="project-num">03</span><span class="project-type">UI / UX</span></div>
+          <h3 class="project-title">3D House Design</h3>
+          <p class="project-desc">Trying my hands on AutoCAD by exploring a simple 3D design of a of a house.</p>
         </div>
       </div>
-
       <div class="project-card reveal">
         <div class="project-media">
-          <div class="placeholder-art"><div class="placeholder-inner">
-            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            <span>Add your image</span>
-          </div></div>
-          <span class="card-corner">View →</span>
+          <a href="https://github.com/tanish-sankar/syncflow" target="_blank">
+          <img src="syncflow.jpg" alt="Syncflow home page view" />
+          <span class="card-corner">View →</span> </a>
         </div>
         <div class="project-info">
-          <div class="project-meta"><span class="project-num">04</span><span class="project-type">UI / UX</span></div>
-          <h3 class="project-title">Interface Project</h3>
-          <p class="project-desc">An interface or UX project. What user problem were you solving? How did you approach the design?</p>
+          <div class="project-meta"><span class="project-num">04</span><span class="project-type">Development</span></div>
+          <h3 class="project-title">Syncflow</h3>
+          <p class="project-desc">A student-centric producivity tool. This project features a to-do list, a focus timer that uses the Pomodoro technique, and a grade tracker.</p>
         </div>
       </div>
-
-      <div class="project-card reveal">
+      <!--div class="project-card reveal">
         <div class="project-media">
           <div class="placeholder-art"><div class="placeholder-inner">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
@@ -425,12 +415,12 @@
         </div>
       </div>
 
-    </div>
+    </div-->
   </section>
 
   <hr class="section-divider" />
 
-  <section id="upload">
+  <!--section id="upload">
     <div class="upload-grid">
       <div class="upload-left reveal">
         <p class="section-tag">Add Work</p>
@@ -451,7 +441,7 @@
         <div class="uploaded-list" id="uploadedList"></div>
       </div>
     </div>
-  </section>
+  </section-->
 
   <hr class="section-divider" />
 
@@ -462,12 +452,12 @@
         <h2>Let's<br />build<br /><em>something.</em></h2>
         <p>Open to college inquiries, collaborations, internships, or just a good conversation about design and code.</p>
         <div class="contact-socials">
-          <a href="https://github.com/yourusername" target="_blank" class="social-link"><span>// GitHub</span><span class="arrow">→</span></a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link"><span>// LinkedIn</span><span class="arrow">→</span></a>
-          <a href="mailto:tanish@email.com" class="social-link"><span>// Email</span><span class="arrow">→</span></a>
+          <a href="https://github.com/tanish-sankar" target="_blank" class="social-link"><span>// GitHub</span><span class="arrow">→</span></a>
+          <!--a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link"><span>// LinkedIn</span><span class="arrow">→</span></a-->
+          <a href="mailto:tanish.sankar7@gmail.com" class="social-link"><span>// Email</span><span class="arrow">→</span></a>
         </div>
       </div>
-      <div class="contact-form reveal">
+      <!--div class="contact-form reveal">
         <div class="form-row">
           <div class="form-group"><label>Name</label><input type="text" id="fname" placeholder="Your name" /></div>
           <div class="form-group"><label>Email</label><input type="email" id="femail" placeholder="you@email.com" /></div>
@@ -476,15 +466,15 @@
         <div class="form-group"><label>Message</label><textarea id="fmsg" placeholder="Tell me what's on your mind..."></textarea></div>
         <button class="submit-btn" onclick="handleSubmit()">Send Message_</button>
       </div>
-    </div>
+    </div-->
   </section>
 
   <footer>
-    <span>© 2025 Tanish Thiyagasankar</span>
+    <span>© 2026 Tanish Thiyagasankar</span>
     <div class="footer-right">
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-      <a href="mailto:tanish@email.com">tanish@email.com</a>
+      <a href="https://github.com/tanish-sankar" target="_blank">GitHub</a>
+      <!--a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a-->
+      <a href="mailto:tanish.sankar7@gmail.com">tanish.sankar7@gmail.com</a>
     </div>
   </footer>
 
@@ -555,4 +545,3 @@
     }
   </script>
 </body>
-</html>
